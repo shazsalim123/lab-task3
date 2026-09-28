@@ -1,0 +1,21 @@
+/* Ensure the table doesn't compress too much on small screens */
+.custom-timetable {
+    min-width: 1000px;
+    table-layout: fixed; /* Forces all time columns to be exactly the same width */
+}
+
+/* Fixed width for the days column */
+.day-col {
+    width: 60px;
+}
+
+/* Minimum height for empty cells to maintain structure */
+.custom-timetable tbody td {
+    height: 90px;
+    font-size: 0.9rem;
+}
+
+/* The exact pastel background color from the original image[cite: 1] */
+.bg-class-slot {
+    background-color: #f4e8f4 !important;
+}
