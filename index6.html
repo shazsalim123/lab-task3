@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonCart | Dark Mode E-Commerce</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="#">NeonCart.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                </ul>
+                <div class="d-flex gap-2 align-items-center">
+                    <!-- Admin Add Product Button -->
+                    <button class="btn btn-outline-info btn-sm fw-bold" data-bs-toggle="modal" data-bs-target="#addProductModal">+ Add Product</button>
+                    <!-- Auth Buttons -->
+                    <button class="btn btn-link text-light text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                    <!-- Cart Trigger -->
+                    <button class="btn btn-outline-light position-relative ms-2" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                        🛒 Cart
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            2
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="py-5 custom-hero text-center d-flex align-items-center">
+        <div class="container py-5">
+            <h1 class="display-2 fw-bolder text-white mb-3 text-glow">The Future of Tech, Today.</h1>
+            <p class="lead text-light mb-4 mx-auto" style="max-width: 600px;">Upgrade your setup with our premium, next-generation peripherals. Dark mode approved.</p>
+            <a href="#products" class="btn btn-primary btn-lg fw-bold px-5 py-3 shadow-lg custom-btn-glow">Shop Collection</a>
+        </div>
+    </section>
+
+    <!-- ================= PRODUCT LISTING ================= -->
+    <section id="products" class="py-5 bg-body">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-5 text-center text-primary">Featured Gear</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                
+                <!-- Product 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-secondary product-card">
+                        <div class="card-img-top bg-dark border-bottom border-secondary d-flex align-items-center justify-content-center text-muted" style="height: 200px;">
+                            [Image: Wireless Keyboard]
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">NeonPro Mechanical Keyboard</h5>
+                            <p class="card-text text-secondary">Wireless, RGB backlit, tactile switches.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="fs-4 fw-bold text-white">$129.99</span>
+                                <button class="btn btn-primary fw-bold px-3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-secondary product-card">
+                        <div class="card-img-top bg-dark border-bottom border-secondary d-flex align-items-center justify-content-center text-muted" style="height: 200px;">
+                            [Image: Gaming Mouse]
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">StealthX Gaming Mouse</h5>
+                            <p class="card-text text-secondary">Ultra-lightweight, 20k DPI sensor, zero latency.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="fs-4 fw-bold text-white">$79.99</span>
+                                <button class="btn btn-primary fw-bold px-3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-secondary product-card">
+                        <div class="card-img-top bg-dark border-bottom border-secondary d-flex align-items-center justify-content-center text-muted" style="height: 200px;">
+                            [Image: Studio Headphones]
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">AuraSound ANC Headphones</h5>
+                            <p class="card-text text-secondary">Active noise cancellation, 40hr battery life.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="fs-4 fw-bold text-white">$199.99</span>
+                                <button class="btn btn-primary fw-bold px-3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= REVIEWS SECTION ================= -->
+    <section id="reviews" class="py-5 bg-body-tertiary">
+        <div class="container py-4 text-center">
+            <h2 class="fw-bold mb-5 text-info">Customer Reviews</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-body p-3 h-100 shadow-sm rounded-4">
+                        <div class="card-body">
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <p class="card-text fst-italic">"The NeonPro keyboard changed my workflow entirely. Best switches I've ever felt."</p>
+                            <h6 class="fw-bold text-primary mt-3">- Alex J.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-body p-3 h-100 shadow-sm rounded-4">
+                        <div class="card-body">
+                            <div class="text-warning mb-2">★★★★☆</div>
+                            <p class="card-text fst-italic">"Great products and fast shipping. The dark mode theme of this store is also a huge plus!"</p>
+                            <h6 class="fw-bold text-primary mt-3">- Sarah M.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CHECKOUT SECTION ================= -->
+    <section id="checkout" class="py-5 border-top border-secondary">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-4 text-center">Secure Checkout</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card bg-body-tertiary border-secondary shadow p-4 rounded-4">
+                        <form>
+                            <h5 class="fw-bold text-primary mb-3">Billing Details</h5>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Last Name">
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Shipping Address">
+                                </div>
+                            </div>
+                            
+                            <h5 class="fw-bold text-info mb-3">Payment Method</h5>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="payment" id="credit" checked>
+                                <label class="form-check-label" for="credit">Credit Card</label>
+                            </div>
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="radio" name="payment" id="paypal">
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                            </div>
+
+                            <button class="btn btn-primary btn-lg w-100 fw-bold custom-btn-glow">Place Order ($209.98)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark text-center py-4 border-top border-secondary">
+        <p class="mb-0 text-secondary">&copy; 2026 NeonCart. Built with Bootstrap 5.3.</p>
+    </footer>
+
+    <!-- ================= CART OFFCANVAS (Display & Edit Cart) ================= -->
+    <div class="offcanvas offcanvas-end bg-body-tertiary" tabindex="-1" id="cartOffcanvas">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title fw-bold text-primary">Your Cart</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            
+            <!-- Cart Item 1 -->
+            <div class="d-flex align-items-center mb-3 p-2 bg-body rounded border border-secondary">
+                <div class="bg-dark rounded p-3 me-3 text-muted" style="width: 60px; height: 60px; font-size: 10px;">IMG</div>
+                <div class="flex-grow-1">
+                    <h6 class="mb-0 fw-bold">StealthX Mouse</h6>
+                    <div class="text-primary fw-bold">$79.99</div>
+                </div>
+                <!-- Edit Quantity -->
+                <input type="number" class="form-control form-control-sm w-25 bg-dark text-white border-secondary" value="1" min="1">
+                <button class="btn btn-sm btn-outline-danger ms-2">X</button>
+            </div>
+
+            <!-- Cart Item 2 -->
+            <div class="d-flex align-items-center mb-3 p-2 bg-body rounded border border-secondary">
+                <div class="bg-dark rounded p-3 me-3 text-muted" style="width: 60px; height: 60px; font-size: 10px;">IMG</div>
+                <div class="flex-grow-1">
+                    <h6 class="mb-0 fw-bold">NeonPro Keyboard</h6>
+                    <div class="text-primary fw-bold">$129.99</div>
+                </div>
+                <!-- Edit Quantity -->
+                <input type="number" class="form-control form-control-sm w-25 bg-dark text-white border-secondary" value="1" min="1">
+                <button class="btn btn-sm btn-outline-danger ms-2">X</button>
+            </div>
+
+            <div class="mt-auto">
+                <div class="d-flex justify-content-between fs-5 fw-bold mb-3 border-top border-secondary pt-3">
+                    <span>Total:</span>
+                    <span class="text-white">$209.98</span>
+                </div>
+                <a href="#checkout" class="btn btn-primary w-100 fw-bold py-2" data-bs-dismiss="offcanvas">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= LOGIN MODAL ================= -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-body-tertiary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-primary">Login to NeonCart</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control border-secondary" id="loginEmail" placeholder="name@example.com">
+                        <label for="loginEmail">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control border-secondary" id="loginPass" placeholder="Password">
+                        <label for="loginPass">Password</label>
+                    </div>
+                    <button class="btn btn-primary w-100 fw-bold">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SIGNUP MODAL ================= -->
+    <div class="modal fade" id="signupModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-body-tertiary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-info">Create an Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control border-secondary" id="signName" placeholder="Full Name">
+                        <label for="signName">Full Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control border-secondary" id="signEmail" placeholder="name@example.com">
+                        <label for="signEmail">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control border-secondary" id="signPass" placeholder="Password">
+                        <label for="signPass">Password</label>
+                    </div>
+                    <button class="btn btn-info w-100 fw-bold text-dark">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= ADD PRODUCT MODAL (Admin) ================= -->
+    <div class="modal fade" id="addProductModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-body-tertiary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-warning">Admin: Add New Product</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Product Title</label>
+                        <input type="text" class="form-control border-secondary">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Price ($)</label>
+                        <input type="number" class="form-control border-secondary">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Product Description</label>
+                        <textarea class="form-control border-secondary" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Image Upload</label>
+                        <input class="form-control bg-dark border-secondary text-white" type="file">
+                    </div>
+                    <button class="btn btn-warning w-100 fw-bold text-dark">Publish Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle (Required for Modals and Offcanvas to open/close) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

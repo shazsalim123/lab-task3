@@ -1,0 +1,70 @@
+/* ==========================================================================
+   BOOTSTRAP 5 DARK MODE OVERRIDES
+   Redefining the default root variables to create a "Neon Cyber" look.
+   ========================================================================== */
+
+[data-bs-theme="dark"] {
+    /* Background Colors */
+    --bs-body-bg: #0d1117;           /* Deep dark background */
+    --bs-body-bg-rgb: 13, 17, 23;
+    
+    --bs-tertiary-bg: #161b22;       /* Slightly lighter for cards/nav */
+    --bs-tertiary-bg-rgb: 22, 27, 34;
+    
+    /* Neon Accent Colors */
+    --bs-primary: #00f2fe;           /* Neon Cyan */
+    --bs-primary-rgb: 0, 242, 254;
+    
+    --bs-info: #b054ff;              /* Electric Purple */
+    --bs-info-rgb: 176, 84, 255;
+    
+    --bs-secondary: #30363d;         /* Border color */
+    
+    /* Override Bootstrap Button/Link text colors to contrast with neon */
+    --bs-primary-text-emphasis: #000;
+}
+
+/* Base Body Font adjustments */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #c9d1d9;
+}
+
+/* --- Hero Section Background --- */
+.custom-hero {
+    min-height: 70vh;
+    background: radial-gradient(circle at 50% 50%, rgba(176, 84, 255, 0.15) 0%, rgba(13, 17, 23, 1) 70%);
+}
+
+/* --- Neon Text Glow --- */
+.text-glow {
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}
+
+/* --- Custom Neon Button --- */
+.custom-btn-glow {
+    color: #000 !important; /* Force black text on cyan button */
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+    transition: all 0.3s ease;
+}
+
+.custom-btn-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.6);
+    transform: translateY(-2px);
+}
+
+/* --- Product Card Interactions --- */
+.product-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--bs-primary) !important;
+}
+
+/* Fix input backgrounds in dark mode for better contrast */
+.form-control, .form-control:focus {
+    background-color: #0d1117;
+    color: #fff;
+}
