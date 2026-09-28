@@ -1,0 +1,26 @@
+/* Global Background Color used by Facebook */
+.fb-bg {
+    background-color: #f0f2f5;
+}
+
+/* 
+   Sticky Sidebar Configuration
+   Subtracts the height of the fixed navbar (approx 56px) to allow independent scrolling
+*/
+.sticky-sidebar {
+    position: sticky;
+    top: 56px; 
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+}
+
+/* Hide scrollbars for a cleaner look in the sidebars */
+.sticky-sidebar::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* Optional hover state for the sponsored ad section */
+.hover-bg-light:hover {
+    background-color: #e4e6eb;
+}
